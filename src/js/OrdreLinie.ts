@@ -42,15 +42,15 @@ constructor(linie:IOrdreLinie){
     this.unitPriceDiscount = linie.UnitPriceDiscount;
 }
 
-public BeregnSum(){
+public BeregnSum() : number{
     return this.orderQty * this.unitPrice-this.unitPriceDiscount;
 }
 
-public Moms() {
+public Moms() : number {
     return this.BeregnSum() * 0.25;
 }
 
-public SumMedMoms() {
+public SumMedMoms() : number {
     return this.BeregnSum() + this.Moms();
 }
 

@@ -14,7 +14,7 @@ function printList(liste : Ordre): string {
     let x : string = "";
     x += "<ol>";
     liste.ordreList.forEach(element => {
-        x += "<li>" + "Sum med Moms = " +element.SumMedMoms().toString() + "</li>"
+        x += "<li>" + "Sum uden Moms = "+ element.BeregnSum() +" / Sum med Moms = " +element.SumMedMoms().toString() + "</li>"
     });
     x += "</ol>";
  
